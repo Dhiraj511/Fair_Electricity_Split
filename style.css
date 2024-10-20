@@ -1,7 +1,7 @@
 
 body {
     font-family: 'Raleway', 'Poppins', Verdana, Tahoma, Arial, sans-serif;
-    display: block;
+    display: flex;
     /*flex-flow: wrap;*/
     justify-content: center;
     align-items: center;
@@ -19,7 +19,7 @@ div{
     justify-content: center;
     align-items: center;
 }
-.container {
+.container, .form-group {
     background: rgba(235, 231, 218, .8);
     background: (180deg, rgba(245, 231, 186, .7) 20%, rgba(235, 231, 218, 1) 80%);
     padding: 20px;

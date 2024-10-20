@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            font-family: 'Raleway', 'Poppins', Verdana, Tahoma, Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(120deg, rgba(255,252,196,1) 10%, rgba(225,155,32,1) 30%, rgba(96,28,145,1) 70%, rgba(65,49,96,1) 90%);
+        }
+
+        .container {
+            background: rgba(235, 231, 218, .8);
+            padding: 20px;
+            margin: 20px auto; /* Added margin to space out the containers */
+            border-radius: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 400px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 28px;
+            margin-bottom: 10px;
+            color: rgb(85, 61, 133);
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: rgb(85, 61, 133);
+        }
+
+        input[type="text"], input[type="password"] {
+            width: 90%;
+            padding: 10px;
+            margin: 0 10px 20px 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            background-image: linear-gradient(90deg, rgba(214,163,73,1) 20%, rgba(117,85,142,1) 80%);
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-image: linear-gradient(90deg, rgba(96,28,145,1) 25%, rgba(225,155,32,1) 75%);
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            color: red; /* Change color of error messages */
+        }
+
+        p {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>baloo</h1>
+        <h2>Welcome! Please sign in.</h2>
+
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul>
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+
+        <form name="login" method="POST" action="{{ url_for('login') }}">
+            <input type="text" name="username" placeholder="Username" autocomplete="on" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="submit" value="Submit" id="submit">
+        </form>
+    </div>
+
+    <div class="container">
+        <p>New here? <a href="/register">Create an account</a></p>
+    </div>
+</body>
+</html>

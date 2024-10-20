@@ -1,12 +1,12 @@
 
 body {
     font-family: 'Raleway', 'Poppins', Verdana, Tahoma, Arial, sans-serif;
-    display: flex;
-    flex-flow: wrap;
+    display: block;
+    /*flex-flow: wrap;*/
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
+    margin: auto;
     background: linear-gradient(120deg, rgba(255,252,196,1) 10%, rgba(225,155,32,1) 30%, rgba(96,28,145,1) 70%, rgba(65,49,96,1) 90%); /*linear-gradient(120deg, rgba(255,250,152,1) 10%, rgba(225,155,32,1) 30%, rgba(96,28,145,1) 70%, rgba(65,49,96,1) 90%);
     /*background: linear-gradient(180deg, rgba(214,163,73,1) 20%, rgba(117,85,142,1) 80%);*/
 }
@@ -14,7 +14,7 @@ body {
     background: rgba(235, 231, 218, .8);
     background: (180deg, rgba(245, 231, 186, .7) 20%, rgba(235, 231, 218, 1) 80%);
     padding: 20px;
-    margin-bottom: 0;
+    margin: auto;
     border-radius: 20px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     width: 90%;
@@ -32,7 +32,7 @@ h2 {
     margin-bottom: 20px;
     color: rgb(85, 61, 133);
 }
-input[type="text"] {
+input[type="text"], input[type="password"] {
     width: 90%;
     padding: 10px;
     margin: 0px 10px 20px 10px;
